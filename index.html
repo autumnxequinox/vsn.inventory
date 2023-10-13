@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="vsn_styles.css">
+</head>
+<body>
+    <h1>Visayas Sulit Ni Inventory</h1>
+
+    <!-- Add Inventory Button -->
+    <div id="add-inv">
+        <button id="add-inv-btn">Add</button>
+    </div>
+
+    <!-- Add Inventory Form Pop-up -->
+    <div class="formPopup" id="addInvFormPopup">
+        <div class="addInvFormPopup-content">
+            <form action="/AddInventory.html" class="formContainer">
+            <div class="addInvFormPopup-header">
+                <h2>Add Inventory</h2>
+            </div>
+            <table id="addItemTable" cellspacing="1px" cellpadding="2%" align="center">
+                <tr>
+                    <td class="addItemTd">
+                        <label for="itemId">
+                        <strong>Item Id</strong>
+                        </label>
+                    </td>
+                    <td>
+                        <input type="text" id="itemId" placeholder="Item Id" name="itemId" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="addItemTd">
+                        <label for="itemName">
+                        <strong>Item name</strong>
+                        </label>
+                    </td>
+                    <td>
+                        <input type="text" id="itemName" placeholder="Item name" name="itemName" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="addItemTd">
+                        <label for="batchId">
+                        <strong>Batch Id</strong>
+                        </label>
+                    </td>
+                    <td>
+                        <input type="text" id="batchId" placeholder="Batch Id" name="batchId" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="addItemTd">
+                        <label for="datePurchased">
+                        <strong>Date purchased</strong>
+                        </label>
+                    </td>
+                    <td align="left">
+                        <input type="date" id="datePurchased" placeholder="Date purchased" name="datePurchased" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="addItemTd">
+                        <label for="itemCategory">
+                        <strong>Item category</strong>
+                        </label>
+                    </td>
+                    <td align="left">
+                        <select name="category" id="itemCategory">
+                            <option value="bondpaper">bondpaper</option>
+                            <option value="drinks">drinks</option>
+                            <option value="inks">inks</option>
+                            <option value="lamination">lamination</option>
+                            <option value="photocopy">photocopy</option>
+                            <option value="misc">misc</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="addItemTd">
+                        <label for="itemQty">
+                        <strong>Quantity</strong>
+                        </label>
+                    </td>
+                    <td>
+                        <input type="number" min="0" id="itemQty" placeholder="Quantity" name="itemQty" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="addItemTd">
+                        <label for="purchaseCost">
+                        <strong>Purchase cost</strong>
+                        </label>
+                    </td>
+                    <td>
+                        <input type="number" min="0" id="purchaseCost" placeholder="Purchase cost" name="purchaseCost" required>
+                    </td>
+                </tr>
+            </table>
+            <button type="submit" class="btn">Add</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+        </div>
+    </div>
+
+    <!--
+    <div id="expense-form">
+        <input type="text" id="description" placeholder="Expense description">
+        <input type="number" id="amount" placeholder="Amount">
+        <select id="category">
+            <option value="Food">Food</option>
+            <option value="Transportation">Transportation</option>
+            <option value="Entertainment">Entertainment</option>
+            -- Add more categories as needed --
+        </select>
+        <button id="add-expense-btn">Add Expense</button>
+    </div>
+    <div id="expense-list">
+        -- Expense items will be displayed here --
+    </div>
+    <div id="total-expenses">
+        Total Expenses: $<span id="total-amount">0</span>
+    </div>
+-->
+    <script src="vsn_script.js"></script>
+</body>
+</html>
